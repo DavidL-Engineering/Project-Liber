@@ -1,5 +1,4 @@
 import gspread
-import os
 """
 Warning: This script assumes you have set up the Google Drive and Google Sheets API.
 It will not work if you do not have these set up, along with the OAuth2 credentials stored on your computer.
@@ -30,7 +29,6 @@ gc = gspread.oauth()
 
 spreadsheet = gc.open("{}".format(s_sheet_title))
 w_sheet = spreadsheet.worksheet("{}".format(w_sheet_title))
-print(os.getcwd())
 
 for i in range(num_results):
     cop_file = open("{}/cp{}.txt".format(results_directory, i), 'r')
