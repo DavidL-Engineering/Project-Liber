@@ -16,3 +16,4 @@ sim_row = w_sheet.findall("15", in_column=1)
 for i in sim_row:
     print("row = " + str(i.row))
     print("col = " + str(i.col))
+
