@@ -1,6 +1,6 @@
 import gspread
 """
-Warning: This script assumes you have set up the Google Drive and Google Sheets API.
+WARNING: This script assumes you have set up the Google Drive and Google Sheets API.
 It will not work if you do not have these set up, along with the OAuth2 credentials stored on your computer.
 
 HOW TO USE THIS SCRIPT:
@@ -58,6 +58,7 @@ for i in range(num_results):
     drag_comp_col = w_sheet.find("B. Drag : Pressure +Viscous", in_row = title_line).col
     lift_tot_col = w_sheet.find("A. Lift [N] (Total)", in_row = title_line).col
     lift_comp_col = w_sheet.find("B. Lift [N] (Pressure + Viscous)", in_row = title_line).col
+    status_col = w_sheet.find("Status", in_row = title_line).col
 
     sim_row_match = w_sheet.findall("{}".format(sim_numbers[i]), in_column=1)
     if len(sim_row_match) > 0:
@@ -75,6 +76,7 @@ for i in range(num_results):
     w_sheet.update_cell(sim_row, drag_comp_col, drag_comp_values)
     w_sheet.update_cell(sim_row, lift_tot_col, lift_tot_value)
     w_sheet.update_cell(sim_row, lift_comp_col, lift_comp_values)
+    w_sheet.update_cell(sim_row, status_col, "*converged done")
 
     cop_file.close
     drag_file.close
