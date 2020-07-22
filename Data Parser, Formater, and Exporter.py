@@ -4,12 +4,12 @@ WARNING: This script assumes you have set up the Google Drive and Google Sheets 
 It will not work if you do not have these set up, along with the OAuth2 credentials stored on your computer.
 
 HOW TO USE THIS SCRIPT:
-1. Enter the directory of the folder containing the data saved as text files under results_directory, ensuring all backslashes are changed to forward slashes.
+1. Enter the directory of the folder containing the data saved as text files under results_directory. Ensure that all backslashes are changed to forward slashes.
 e.g. C:/Users/david/Documents/1_(SSD)_Important_Things/Work/Project Liber
 2. Enter the row number of the title line for the set of data under title_line
-3. Enter the simulation numbers corresponding to the exported simulation data under sim_numbers.
-e.g. sim_numbers = [15,16,17,18] 
-Where cp0.txt, drag0.txt, lift0.txt all correspond to Sim 1.
+3. Enter the simulation numbers or uniquely identifying names corresponding to the exported simulation data under sim_numbers.
+e.g. sim_numbers = [1,2,3,4], or sim_numbers = ["nc0", "nc50", "nc90"]
+Where cp0.txt, drag0.txt, lift0.txt all correspond to Sim 1; cp1.txt, drag1.txt, lift.txt all correspond to Sim 2; etc.
 
 4. Enter the EXACT title of the spreadsheet under s_sheet_title.
 5. Enter the EXACT title of the worksheet under which the data will be entered under w_sheet_title.
@@ -17,6 +17,7 @@ Where cp0.txt, drag0.txt, lift0.txt all correspond to Sim 1.
 7. Save the edited script in the same directory where ALL the results are located
 8. Go ahead and run the script
 """
+
 results_directory = "C:/Users/david/Documents/1_(SSD)_Important_Things/Work/Project Liber"
 title_line = 32
 sim_numbers = [15,16,17,18]
