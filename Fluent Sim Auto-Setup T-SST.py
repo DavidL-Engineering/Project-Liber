@@ -1,13 +1,40 @@
 # encoding: utf-8
 # Release 19.1
+# Written by BOT Yokel
 SetScriptVersion(Version="19.1.103")
 template1 = GetTemplate(TemplateName="FLUENT")
 
-filenames=["Aero6_NACA65_Sim14","Aero7_Jet_Engine_Sim14_Refined"]
-lengths=["4.99597","4.889165"]
-areas=["14.966","14.107"]
+'''
+Instructions:
+1. Enter the file path containing the Fluent case files under directory. Change all backslashes in the file path to forward slashes
+e.g. directory = "C:/Users/tom/Documents/DV2 Nose Study/Group 3"
+2. Enter the names of the case files without the .cas extension under filenames
+3. Enter the reference length (m) for each case file under lengths. The order of the reference lengths should match the order of the filenames
+4. Enter the reference area (m^2) for each case file under areas. The order of the reference areas should match the order of the filenames
+5. Enter the number of case files to be set up under num_sims
+'''
+
+directory = "INSERT_HERE"
+
+filenames = [
+"INSERT_HERE",
+"INSERT_HERE"
+]
+
+lengths = [
+"INSERT_HERE",
+"INSERT_HERE"
+]
+
+areas = [
+"INSERT_HERE",
+"INSERT_HERE"
+]
+
+num_sims = 0
+
 # Range is number of sims to set up
-for num in range(2):
+for num in range(num_sims):
         system1 = template1.CreateSystem()
         system1.DisplayText = "{}".format(filenames[num])
         setup1 = system1.GetContainer(ComponentName="Setup")
@@ -15,7 +42,7 @@ for num in range(2):
         fluentLauncherSettings1.SetEntityProperties(Properties=Set(Dimension="ThreeD", EnvPath={}, RunParallel=True, NumberOfProcessors=8))
         setup1.Edit()
         # Change file path for the next line, change all file path backslashes to forward slashes
-        setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"MenuBar*ImportSubMenu*Case...\")(cx-gui-do cx-set-file-dialog-entries \"Select File\" '( \"C:/Users/tom/Documents/Aero6_Aero7/{}.cas\") \"Case Files (*.cas* *.msh* *.MSH* )\")".format(filenames[num]))
+        setup1.SendCommand(Command="(cx-gui-do cx-activate-item \"MenuBar*ImportSubMenu*Case...\")(cx-gui-do cx-set-file-dialog-entries \"Select File\" '( \"{}/{}.cas\") \"Case Files (*.cas* *.msh* *.MSH* )\")".format(directory, filenames[num]))
         setup1.SendCommand(Command='(cx-gui-do cx-activate-item "General*Table1*ButtonBox1(Mesh)*PushButton1(Scale)")')
         setup1.SendCommand(Command="(cx-gui-do cx-set-list-selections \"Scale Mesh*Table1*Table2(Scaling)*DropDownList2(Mesh Was Created In)\" '( 3))")
         setup1.SendCommand(Command='(cx-gui-do cx-activate-item "Scale Mesh*Table1*Table2(Scaling)*DropDownList2(Mesh Was Created In)")')
