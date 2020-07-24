@@ -20,12 +20,14 @@ Where cp0.txt, drag0.txt, lift0.txt all correspond to Sim 1; cp1.txt, drag1.txt,
 8. Go ahead and run the script
 """
 
-results_directory = "C:/Users/david/Documents/1_(SSD)_Important_Things/Work/Project Liber"
-title_line = 32
-sim_numbers = [15,16,17,18]
-num_results = 4
+results_directory = "INSERT_HERE"
+title_line = 0
+sim_numbers = [
+1,2
+]
+num_results = 2
 
-s_sheet_title = "Google API Test"
+s_sheet_title = "INSERT_HERE"
 w_sheet_title = "DOE Summary Results"
 
 gc = gspread.oauth()
