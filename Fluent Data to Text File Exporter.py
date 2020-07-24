@@ -41,6 +41,7 @@ if i==0:
     output = open("{}/iter{}.txt".format(results_directory, i), 'w')
     output.write(iter_data)
     output.close()
+    iter_file.close()
     
     i+=1
 
@@ -64,7 +65,9 @@ for i in range(1,num_sims):
     iter_file = open("{}/dp0/FLU-{}/Fluent/drag-rfile.out".format(files_directory, i), 'r')
     iter_lines = iter_file.readlines()
     iter_data = iter_lines[len(iter_lines)-1]
+    
 
     output = open("{}/iter{}.txt".format(results_directory, i), 'w')
     output.write(iter_data)
     output.close()
+    iter_file.close()
