@@ -3,6 +3,7 @@
 SetScriptVersion(Version="19.1.103")
 
 '''
+WARNING: This script will not work if you have changed the order of the modules (e.g. created 5 modules and deleted any of modules 1-4)
 Instructions:
 1. Enter results directory under variable results_directory. Change all backslashes to forward slashes
 e.g. results_directory = "C:/Users/tom/Documents/DV2 Nose Study/Group 3/Results"
