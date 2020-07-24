@@ -35,24 +35,29 @@ for i in range(num_results):
     cop_file = open("{}/cp{}.txt".format(results_directory, i), 'r')
     drag_file = open("{}/drag{}.txt".format(results_directory, i), 'r')
     lift_file = open("{}/lift{}.txt".format(results_directory, i), 'r')
+    iter_file = open("{}/iter{}.txt".format(results_directory, i), 'r')
 
     cop_all_data = cop_file.readlines()
     drag_all_data = drag_file.readlines()
     lift_all_data = lift_file.readlines()
+    iter_all_data = iter_file.readlines()
 
     # cop values are on line 4
     # drag values are on line 12
     # lift values are on line 12
+    # iter values are on line 1
 
     cop_line_data = cop_all_data[4].split()
     drag_line_data = drag_all_data[12].split()
     lift_line_data = lift_all_data[12].split()
+    iter_line_data = iter_all_data[0].split()
 
     cop_values = str(cop_line_data[1]) + " " + str(cop_line_data[2])
     drag_comp_values = str(drag_line_data[1]) + " " + str(drag_line_data[2])
     drag_tot_value = str(drag_line_data[3])
     lift_comp_values = str(lift_line_data[1] + " " + lift_line_data[2])
     lift_tot_value = str(lift_line_data[3])
+    iter_value = str(iter_line_data[0])
 
     cop_col = w_sheet.find("Center of Pressure (x=0 [m])", in_row = title_line).col
     drag_tot_col = w_sheet.find("A. Drag [N] (Total)", in_row = title_line).col
@@ -60,6 +65,7 @@ for i in range(num_results):
     lift_tot_col = w_sheet.find("A. Lift [N] (Total)", in_row = title_line).col
     lift_comp_col = w_sheet.find("B. Lift [N] (Pressure + Viscous)", in_row = title_line).col
     status_col = w_sheet.find("Status", in_row = title_line).col
+    iter_col = w_sheet.find("Number of Iterations", in_row = title_line).col
 
     sim_row_match = w_sheet.findall("{}".format(sim_numbers[i]), in_column=1)
     if len(sim_row_match) > 0:
@@ -72,13 +78,15 @@ for i in range(num_results):
     
     sim_row = sim_row_match[j].row
 
-    w_sheet.update_cell(sim_row, cop_col, cop_values)
+    w_sheet.update_cell(sim_row, iter_col, iter_value)
     w_sheet.update_cell(sim_row, drag_tot_col, drag_tot_value)
     w_sheet.update_cell(sim_row, drag_comp_col, drag_comp_values)
     w_sheet.update_cell(sim_row, lift_tot_col, lift_tot_value)
     w_sheet.update_cell(sim_row, lift_comp_col, lift_comp_values)
     w_sheet.update_cell(sim_row, status_col, "*converged done")
+    w_sheet.update_cell(sim_row, cop_col, cop_values)
 
-    cop_file.close
-    drag_file.close
-    lift_file.close
+    cop_file.close()
+    drag_file.close()
+    lift_file.close()
+    iter_file.close()
