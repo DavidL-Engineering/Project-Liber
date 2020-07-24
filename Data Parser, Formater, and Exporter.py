@@ -1,3 +1,5 @@
+# Written by BOT Yokel
+
 import gspread
 """
 WARNING: This script assumes you have set up the Google Drive and Google Sheets API.

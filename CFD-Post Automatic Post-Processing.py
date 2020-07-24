@@ -1,7 +1,6 @@
 ﻿# encoding: utf-8
 # 2020 R1
-# David Leong
-# 2020/07/17
+# Written by BOT Yokel
 # WARNING: This script will not work if you have changed the order of the modules (e.g. created 5 modules and deleted any of modules 1-4)
 SetScriptVersion(Version="20.1.164")
 

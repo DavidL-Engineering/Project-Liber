@@ -1,4 +1,5 @@
 # encoding: utf-8
+# Adapted by BOT Yokel
 # Release 19.1
 SetScriptVersion(Version="19.1.103")
 
@@ -12,8 +13,8 @@ e.g. files_directory = "C:/Users/tom/Documents/DV2 Nose Study/Group 3/DV2 Nose S
 3. Enter the number of simulations you wish to retrieve results from under num_sims
 '''
 
-results_directory = "insert_here"
-files_directory = "insert_here"
+results_directory = "INSERT_HERE"
+files_directory = "INSERT_HERE"
 num_sims = 0
 
 i = 0
