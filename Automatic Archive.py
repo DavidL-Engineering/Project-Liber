@@ -11,7 +11,7 @@ INSTRUCTIONS:
 e.g. "C:/Users/tom/Documents/DV2 Nose Study/Group 3"
 2. Enter the project name under proj_name.
 e.g. "Test"
-3. Enter the design series of the project under series. The series you may choose from are: V1, V2, V3, V4, V5, V6, DV1, DV2, DV3, DV4. Do not include any spaces, and capitalize all letters.
+3. Enter the design series of the project under series. The series you may choose from are: V1, V2, V3, V4, V5, V6, DV1, DV2, DV3, DV4, DV5, DV6, DV7. Do not include any spaces, and capitalize all letters.
 e.g. "DV1"
 4. Enter the desired name of the project's archive under archive_name.
 e.g. "Test Archive"
