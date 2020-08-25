@@ -257,9 +257,9 @@ if queue:
   Lighting = On
   Line Width = 1
   Location List = /ISOSURFACE:Isosurface Y 0
-  Locator Sampling Method = Equally Spaced
+  Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 25
+  Maximum Number of Items = 250
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
@@ -334,9 +334,9 @@ if queue:
   Lighting = On
   Line Width = 1
   Location List = /ISOSURFACE:Isosurface Pos Y 40
-  Locator Sampling Method = Equally Spaced
+  Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 25
+  Maximum Number of Items = 500
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
@@ -411,9 +411,9 @@ if queue:
   Lighting = On
   Line Width = 1
   Location List = /ISOSURFACE:Isosurface Neg Y 40
-  Locator Sampling Method = Equally Spaced
+  Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 25
+  Maximum Number of Items = 250
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
@@ -1236,54 +1236,6 @@ for num in range(1,queue):
 
   > update
   ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/sim 4.wmv
-  QAnim Save MPEG = Off
-  QAnim Looping = Bounce
-  QAnim Looping Cycles = 1
-  Video Format = wmv
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/sim 4.wmv
-  QAnim Save MPEG = Off
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = wmv
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/sim 4.wmv
-  QAnim Save MPEG = Off
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = wmv
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/sim 4.wmv
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = wmv
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/sim 4.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Back Left Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
   QAnim MPEG Filename = {}/Back Left Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
@@ -1309,7 +1261,7 @@ for num in range(1,queue):
   Output to User Directory = Off
   QAnim Override Symbol = On
   QAnim Symbol Size = 0.05
-  QAnim Symbol Spacing = 0.4
+  QAnim Symbol Spacing = 0.3
   QAnim Symbol Type = Ball
   Screen Capture = Off
   Speed Adjustment Selection = Normal
@@ -1354,14 +1306,6 @@ for num in range(1,queue):
   Video Format = mp4
 
   END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Back Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
   results1.SendCommand(Command="""ANIMATION: ANIMATION
   QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
   QAnim Frames = 100
@@ -1387,62 +1331,6 @@ for num in range(1,queue):
 
   > update
   ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Back Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Back Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Back Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION:ANIMATION
   QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
@@ -1454,6 +1342,102 @@ for num in range(1,queue):
   QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
   QAnim Frames = 100
   QAnim MPEG Filename = {}/Front Right Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+  END
+  >animate quickAnimate""".format(filepaths[0]))
+  results1.SendCommand(Command="""VIEW:View 1
+  Camera Mode = User Specified
+  CAMERA:
+  Option = Pivot Point and Quaternion
+  Pivot Point = 2.84476, 0.00908112, 1.09631
+  Scale = 0.563792
+  Pan = 0, 0
+  Rotation Quaternion = 0.389314, 0.563849, 0.612905, -0.393468
+
+  END
+
+  END
+
+  > update
+  ANIMATION:ANIMATION
+  QAnim MPEG Filename = {}/Back Right Zoomed Out Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+
+  END""".format(filepaths[0]))
+  results1.SendCommand(Command="""ANIMATION: ANIMATION
+  QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
+  QAnim Frames = 100
+  QAnim MPEG Filename = {}/Back Right Zoomed Out Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+  END
+  >animate quickAnimate""".format(filepaths[0]))
+  results1.SendCommand(Command="""VIEW:View 1
+    Camera Mode = User Specified
+    CAMERA:
+      Option = Pivot Point and Quaternion
+      Pivot Point = 3.23676, 0.504839, 0.995587
+      Scale = 0.289498
+      Pan = -0.24374, -1.06636
+      Rotation Quaternion = -4.32978e-17, 0.707107, 0.707107, 4.32978e-17
+      
+    END
+
+  END
+
+  > update
+  ANIMATION:ANIMATION
+  QAnim MPEG Filename = {}/Right Side Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+
+  END""".format(filepaths[0]))
+  results1.SendCommand(Command="""ANIMATION: ANIMATION
+  QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
+  QAnim Frames = 100
+  QAnim MPEG Filename = {}/Right Side Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+  END
+  >animate quickAnimate""".format(filepaths[0]))
+  results1.SendCommand(Command="""VIEW:View 1
+    Camera Mode = User Specified
+    CAMERA:
+      Option = Pivot Point and Quaternion
+      Pivot Point = 2.93982, 0.0829013, 0.841815
+      Scale = 0.398601
+      Pan = 0, 0
+      Rotation Quaternion = 0.432432, 0.545058, 0.576073, -0.428994
+      
+    END
+
+  END
+
+  > update
+  ANIMATION:ANIMATION
+  QAnim MPEG Filename = {}/Back Right Zoomed Out 2 Streamline Animation.mp4
+  QAnim Save MPEG = On
+  QAnim Looping = Loop
+  QAnim Looping Cycles = 1
+  Video Format = mp4
+
+  END""".format(filepaths[0]))
+  results1.SendCommand(Command="""ANIMATION: ANIMATION
+  QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
+  QAnim Frames = 100
+  QAnim MPEG Filename = {}/Back Right Zoomed Out 2 Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
   QAnim Looping Cycles = 1
