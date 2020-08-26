@@ -88,7 +88,7 @@ if queue:
   Tile Texture = Off
   Transform Texture = Off
   Transparency = 0.0
-  Value = 0.0 [m]
+  Value = 0.0001 [m]
   Variable = Y
   Variable Boundary Values = Conservative
     OBJECT VIEW TRANSFORM:
