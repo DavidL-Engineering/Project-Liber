@@ -33,7 +33,7 @@ if queue:
   results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
   >hide /POLYLINE:Centerline Polyline, view=/VIEW:View 1""")
   results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
-  >show /DATA READER/CASE:Case sim 4/BOUNDARY:car, view=/VIEW:View 1""")
+  >show /DATA READER/CASE:Case {}/BOUNDARY:car, view=/VIEW:View 1""".format(modules[0]))
   results1.SendCommand(Command="""VIEW:View 1
     Camera Mode = User Specified
     CAMERA:
@@ -698,7 +698,7 @@ for num in range(1,queue):
   results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
   >hide /POLYLINE:Centerline Polyline, view=/VIEW:View 1""")
   results1.SendCommand(Command="""# Sending visibility action from ViewUtilities
-  >show /DATA READER/CASE:Case sim 4/BOUNDARY:car, view=/VIEW:View 1""")
+  >show /DATA READER/CASE:Case {}/BOUNDARY:car, view=/VIEW:View 1""".format(modules[num]))
   results1.SendCommand(Command="""VIEW:View 1
     Camera Mode = User Specified
     CAMERA:
