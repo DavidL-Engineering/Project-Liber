@@ -259,7 +259,7 @@ if queue:
   Location List = /ISOSURFACE:Isosurface Y 0
   Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 250
+  Maximum Number of Items = 150
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
@@ -336,7 +336,7 @@ if queue:
   Location List = /ISOSURFACE:Isosurface Pos Y 40
   Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 500
+  Maximum Number of Items = 150
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
@@ -413,7 +413,7 @@ if queue:
   Location List = /ISOSURFACE:Isosurface Neg Y 40
   Locator Sampling Method = Vertex
   Max = 0.0 [m s^-1]
-  Maximum Number of Items = 250
+  Maximum Number of Items = 150
   Min = 0.0 [m s^-1]
   Number of Samples = 500
   Number of Sides = 8
