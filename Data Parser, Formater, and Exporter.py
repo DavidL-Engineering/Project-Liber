@@ -28,7 +28,7 @@ sim_numbers = [
 num_results = 000
 
 s_sheet_title = "INSERT_HERE"
-w_sheet_title = "DOE Summary Results"
+w_sheet_title = "INSERT_HERE"
 
 gc = gspread.oauth()
 
