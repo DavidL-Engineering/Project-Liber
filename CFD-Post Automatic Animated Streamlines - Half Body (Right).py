@@ -401,6 +401,7 @@ if queue:
   END
 
   > update
+  ANIMATION:ANIMATION
   QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
@@ -859,6 +860,7 @@ for num in range(1,queue):
   END
 
   > update
+  ANIMATION:ANIMATION
   QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
