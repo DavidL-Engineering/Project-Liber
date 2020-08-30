@@ -528,11 +528,11 @@ if queue:
   results1.SendCommand(Command="""VIEW:View 1
     Camera Mode = User Specified
     CAMERA:
-      Option = Pivot Point and Quaternion
-      Pivot Point = 4.4939, 0.459533, 0.511379
-      Scale = 0.624333
-      Pan = 0.756583, -0.215757
-      Rotation Quaternion = -3.72529e-09, 0.707107, 0.707107, -3.72529e-09
+    Option = Pivot Point and Quaternion
+    Pivot Point = 4.4939, 0.459533, 0.511379
+    Scale = 0.624333
+    Pan = 0.756583, -0.215757
+    Rotation Quaternion = -3.72529e-09, 0.707107, 0.707107, -3.72529e-09
       
     END
 
