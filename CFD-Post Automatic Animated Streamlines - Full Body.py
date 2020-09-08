@@ -528,38 +528,6 @@ if queue:
   results1.SendCommand(Command="""VIEW:View 1
     Camera Mode = User Specified
     CAMERA:
-    Option = Pivot Point and Quaternion
-    Pivot Point = 4.4939, 0.459533, 0.511379
-    Scale = 0.624333
-    Pan = 0.756583, -0.215757
-    Rotation Quaternion = -3.72529e-09, 0.707107, 0.707107, -3.72529e-09
-      
-    END
-
-  END
-
-  > update
-  ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[0]))
-  results1.SendCommand(Command="""ANIMATION: ANIMATION
-  QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
-  QAnim Frames = 100
-  QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-  END
-  >animate quickAnimate""".format(filepaths[0]))
-  results1.SendCommand(Command="""VIEW:View 1
-    Camera Mode = User Specified
-    CAMERA:
       Option = Pivot Point and Quaternion
       Pivot Point = 4.4939, 0.459533, 0.511379
       Scale = 0.860138
@@ -1116,38 +1084,6 @@ for num in range(1,queue):
   QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
   QAnim Frames = 100
   QAnim MPEG Filename = {}/Trailing Edge and Wake Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-  END
-  >animate quickAnimate""".format(filepaths[num]))
-  results1.SendCommand(Command="""VIEW:View 1
-    Camera Mode = User Specified
-    CAMERA:
-      Option = Pivot Point and Quaternion
-      Pivot Point = 4.4939, 0.459533, 0.511379
-      Scale = 0.624333
-      Pan = 0.756583, -0.215757
-      Rotation Quaternion = -3.72529e-09, 0.707107, 0.707107, -3.72529e-09
-      
-    END
-
-  END
-
-  > update
-  ANIMATION:ANIMATION
-  QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
-  QAnim Save MPEG = On
-  QAnim Looping = Loop
-  QAnim Looping Cycles = 1
-  Video Format = mp4
-
-  END""".format(filepaths[num]))
-  results1.SendCommand(Command="""ANIMATION: ANIMATION
-  QAnim Object List = /STREAMLINE:Streamline Neg Y 40,/STREAMLINE:Streamline Pos Y 40,/STREAMLINE:Streamline Y 0
-  QAnim Frames = 100
-  QAnim MPEG Filename = {}/Trailing Edge and Wake 2 Streamline Animation.mp4
   QAnim Save MPEG = On
   QAnim Looping = Loop
   QAnim Looping Cycles = 1
