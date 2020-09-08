@@ -27,6 +27,8 @@ else:
 
 # Will run every time when lists are non-empty
 if queue:
+    system1 = GetSystem(Name="Post")
+    results1 = system1.GetContainer(ComponentName="Results")
     results1.SendCommand(Command="""CHART:Cp vs X Coord
     Chart Axes Font = Tahoma, 10, False, False, False, False
     Chart Axes Titles Font = Tahoma, 10, True, False, False, False
@@ -1157,6 +1159,8 @@ if queue:
     
 
 for num in range(1,queue):
+    system1 = GetSystem(Name="Post")
+    results1 = system1.GetContainer(ComponentName="Results")
     results1.SendCommand(Command="""CHART:Cp vs X Coord
     Chart Axes Font = Tahoma, 10, False, False, False, False
     Chart Axes Titles Font = Tahoma, 10, True, False, False, False
