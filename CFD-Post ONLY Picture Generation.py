@@ -26,7 +26,7 @@ else:
     queue = len(filepaths)
 
 # Will run every time when lists are non-empty
-if queue:
+if queue >= 1:
     system1 = GetSystem(Name="Post")
     results1 = system1.GetContainer(ComponentName="Results")
     results1.SendCommand(Command="""CHART:Cp vs X Coord

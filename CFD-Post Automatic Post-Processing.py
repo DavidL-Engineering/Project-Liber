@@ -26,7 +26,7 @@ else:
     queue = len(filepaths)
 
 # Will run every time when lists are non-empty
-if queue:
+if queue >= 1:
     template1 = GetTemplate(TemplateName="Results")
     system1 = GetSystem(Name="FLU")
     system2 = template1.CreateSystem(
